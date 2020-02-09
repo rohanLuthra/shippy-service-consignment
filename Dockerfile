@@ -6,6 +6,9 @@ RUN apk update && apk upgrade && \
 RUN mkdir /app
 WORKDIR /app
 
+COPY go.mod . 
+COPY go.sum .
+
 ENV GO111MODULE=on
 
 COPY . .
